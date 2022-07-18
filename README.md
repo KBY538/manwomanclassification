@@ -1,0 +1,2 @@
+# manwomanclassification
+resnet18 transferlearning 남자여자판별기
