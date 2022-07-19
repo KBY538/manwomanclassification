@@ -29,7 +29,7 @@ def create_folder(directory):
 def build_biclassify_dataset(data_dir, csv_file, attribute, class_names, n=1000, new_dir_name='dataset', frac=0.2):
   data = pd.read_csv(csv_file)
 
-  data = [data[data[attribute] == -1], data[data[attribute] == 1]]
+  data = [data[data[attribute] != 1], data[data[attribute] == 1]]
 
   data[0] = data[0].sample(n=n)
   data[1] = data[1].sample(n=n)
