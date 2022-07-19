@@ -71,7 +71,7 @@ resnet18 transferlearning 남자여자판별기
     --data-dir          : default='./dataset/'
     --data-csv          : default='list_attr_celeba.csv'
     --data-attr         : default='Male'
-    --classes_name      : default='['female', 'male']
+    --classes_name      : default=['female', 'male']
     --data-size         : default=1000
     --prepared          : Is the dataset prepared?
     --crop-size         : default=224
@@ -100,7 +100,7 @@ resnet18 transferlearning 남자여자판별기
     --data-dir          : default='./dataset/'
     --data-csv          : default='list_attr_celeba.csv'
     --data-attr         : default='Male'
-    --classes_name      : default='['female', 'male']
+    --classes_name      : default=['female', 'male']
     --data-size         : default=1000
     --prepared          : Is the dataset prepared?
     --crop-size         : default=224
