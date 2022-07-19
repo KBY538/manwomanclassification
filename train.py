@@ -92,7 +92,7 @@ class Train():
         self.optimizer = optim.SGD(self.model.parameters(), lr=0.001, momentum=0.9)
         self.scheduler = lr_scheduler.StepLR(self.optimizer, step_size=7, gamma=0.1)
 
-    def train_model(self, save_dir, save_every, num_epochs):
+    def train_model(self, save_dir, save_every, num_epochs, data_attr):
         criterion = self.criterion
         optimizer = self.optimizer
         scheduler = self.scheduler
@@ -162,7 +162,7 @@ class Train():
 
         # load best model weights
         self.model.load_state_dict(best_model_wts)
-        self.save_model(epoch, save_dir, "training_complete.pt")
+        self.save_model(epoch, save_dir, "{}_training_complete.pt".format(data_attr))
         
 
     def save_model(self, epoch, save_dir, name=None):
@@ -190,7 +190,7 @@ def main():
 
     face_dataset = CustomDataset(data_dir, crop=args.crop_size, resize=args.resize_size, batch_size=args.batch_size, num_workers=args.num_workers, mean=args.mean, std=args.std)
     model = load_resnet18_pretrained(device, args.checkpoint)
-    trainer = Train(model=model, dataset=face_dataset, device=device, num_epochs=args.num_epochs)
+    trainer = Train(model=model, dataset=face_dataset, device=device, num_epochs=args.num_epochs, data_attr=args.data_attr)
     trainer.train_model(args.save_dir, args.save_every, args.num_epochs)
 
 if __name__ == '__main__':
