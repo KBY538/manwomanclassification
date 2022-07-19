@@ -51,7 +51,7 @@ resnet18 transferlearning 남자여자판별기
 > In default, you can prepare dataset automatically. But you must have below things.
 - image data  
 - csv file containing `image id` and `[attribute]` columns  
-: csv file contains annotations. `image id` is filename of image. `[attribute]` is attribute name which you want to classify. It must be contained in columns of csv file. The value of attribute must be 1 or -1. The data of label -1 will classify as 0, and the data of label 1 will classify 1.  
+: csv file contains annotations. `image id` is filename of image. `[attribute]` is attribute name which you want to classify. It must be contained in columns of csv file. The value of attribute must be 1 or -1(or not 1). The data of label -1(or not 1) will classify as 0, and the data of label 1 will classify 1.  
 - number of images per class  
 
 ## Usage
