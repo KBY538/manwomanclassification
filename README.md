@@ -87,7 +87,7 @@ resnet18 transferlearning 남자여자판별기
     --momentum          : default=0.9
     --step-size         : default=7
     --gamma             : default0.1
-    --test-data-ratio   : default=1
+    --test-data-ratio   : default=0.2
 ```
 - usage
 ```
