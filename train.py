@@ -42,7 +42,7 @@ def get_parser():
                         help="Dataset csv.")
     parser.add_argument("--data-attr", type=str, default=DATA_ATTR,
                         help="Data attribute we focus.")
-    parser.add_argument("--classes_name", type=list, default=CLASSES_NAME,
+    parser.add_argument("--classes_name", nargs="+", default=CLASSES_NAME,
                         help="Path to the directory containing the dataset.")
     parser.add_argument("--data-size", type=int, default=DATA_SIZE,
                         help="Data size.")
